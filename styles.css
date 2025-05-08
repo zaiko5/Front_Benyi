@@ -1,20 +1,88 @@
+/*Para todo el body de la pagina*/
 body {
     font-family: sans-serif;
-    text-align: center;
+    text-align: center; /*Este ya centra todo en la app web*/
     margin-top: 50px;
     background-color: #121212;
     color: #bababa;
   }
   
-  button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #bababa;
-    border-radius: 7px;
+  /*Para el div de todo el contenido*/
+  .container {
+    max-width: 400px;
+    margin: auto;
+    background: #444444;
+    padding: 20px;
+    border-radius: 12px;
   }
-
+  
+  /*Pära el div que muestra el estatus*/
+  .status {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /*Para cuando el div con clase estatus tenga la clase on despues*/
+  .status.on {
+    background-color: #d4f4dd;
+    color: #2a6f39;
+  }
+  
+  /*Para cuando el div con clase estatus tenga la clase off despues*/
+  .status.off {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  /*Para los botones*/
+  button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /*Al boton con id startBtn*/
+  #startBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /*Al boton con id stopBtn*/
+  #stopBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /*Para cuando se pase por encima el raton del boton*/
   button:hover {
-    background-color: #999999;
+    opacity: 0.8;
+  }
+  
+  /*Para el spinner*/
+  .spinner { 
+    margin: auto; /*Esto centra el div horizontalmente xd*/
+    margin-top: 15px;
+    width: 32px;
+    height: 32px;
+    border: 4px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /*Por investigar (me lo dio chat para hacer q girara xd(*/
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }

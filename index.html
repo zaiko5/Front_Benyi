@@ -7,11 +7,25 @@
     <title>Distancia de un objeto</title>
 </head>
 <body>
-    <h1>Control del Sensor Ultrasónico</h1>
+    <!--Contenedor para el recuadro de todo el contenido-->
+    <div class="container">
+        <!--Titulo-->
+        <h1>Control del Sensor Ultrasónico</h1>
+        
+        <!--div para mostrar el status-->
+        <div id="status" class="status off">⛔ Sensor detenido</div>
+        
+        <!--Div para los botones-->
+        <div class="buttons">
+            <!--Uso del id para mandarlos llamar desde JS.-->
+          <button id="startBtn">🟢 Comenzar programa</button>
+          <button id="stopBtn">🔴 Apagar programa</button>
+        </div>
     
-    <button id="startBtn">🟢 Comenzar programa</button>
-    <button id="stopBtn">🔴 Apagar programa</button>
-
-    <script src="script.js"></script>
+        <!--Div para el spinner (rueda de carga)-->
+        <div id="spinner" class="spinner hidden"></div>
+      </div>
+    
+      <script src="script.js"></script>
 </body>
 </html>
